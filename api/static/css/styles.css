@@ -1,0 +1,113 @@
+html {
+    height: 100%;
+    display: table;
+    margin: auto;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #10203d;
+
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#register {
+    height: 450px;
+}
+
+img {
+    margin-bottom: 69.5px;
+}
+
+input::-ms-reveal, input::-ms-clear { 
+  display: none;
+}
+
+div {
+    border: 1px solid #003554;
+    border-radius: 20px;
+
+    width: 300px;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+div > form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+div > form > input[type=submit] {
+    margin-top: 30px;
+    background-color: #32627d;
+    transition: background-color 0.2s linear;
+    border-color: transparent;
+    height: 40px;
+    width: 200px;
+}
+
+div > form > input[type=submit]:hover {
+    background-color: #7bc9f6;
+    cursor: pointer;
+}
+
+div > form > input[id=credentials] {
+    background-color: transparent;
+    all: unset;
+    background: linear-gradient(#003f64, #00436a) center bottom 5px / 0px 1px no-repeat;
+    padding: 10px;
+    text-align: center;
+    transition: background 0.2s linear;
+}
+
+div > form > input[id=credentials]:focus {
+    background: linear-gradient(#003f64, #00436a) center bottom 5px / 200px 1px no-repeat;
+}
+
+div > button {
+    opacity: 100%;
+    background-color: transparent;
+    border: transparent;
+
+    font-size: 19px;
+    color: #003554;
+
+    position: absolute;
+    top: 494px;
+    left: 1030px;
+}
+
+div > button:hover {
+    cursor: pointer;
+}
+
+
+div > h2 {
+    margin-top: 50px; 
+    margin-bottom: 30px;
+}
+
+div > p {
+   margin-top: auto; 
+}
+
+div > p > a {
+    text-decoration: none;
+    color: #32627d;
+    transition: color 250ms linear;
+}
+
+div > p > a:hover {
+    color: #479fd2;
+}
