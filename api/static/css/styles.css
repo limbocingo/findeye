@@ -1,113 +1,120 @@
-html {
-    height: 100%;
-    display: table;
-    margin: auto;
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Lato:wght@300&display=swap');
 
-    font-family: 'Montserrat', sans-serif;
-    color: white;
+
+* {
+    font-family: 'Barlow', sans-serif;
+    text-decoration: none;
 }
 
 body {
-    background-color: #10203d;
-
-    display: table-cell;
-    vertical-align: middle;
+    background-color: #0e1111;
 }
 
-#register {
-    height: 450px;
-}
-
-img {
-    margin-bottom: 69.5px;
-}
-
-input::-ms-reveal, input::-ms-clear { 
-  display: none;
-}
-
-div {
-    border: 1px solid #003554;
-    border-radius: 20px;
-
-    width: 300px;
-    height: 400px;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-}
-
-div > form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-}
-
-div > form > input[type=submit] {
-    margin-top: 30px;
-    background-color: #32627d;
-    transition: background-color 0.2s linear;
-    border-color: transparent;
-    height: 40px;
-    width: 200px;
-}
-
-div > form > input[type=submit]:hover {
-    background-color: #7bc9f6;
-    cursor: pointer;
-}
-
-div > form > input[id=credentials] {
-    background-color: transparent;
+.error {
     all: unset;
-    background: linear-gradient(#003f64, #00436a) center bottom 5px / 0px 1px no-repeat;
-    padding: 10px;
-    text-align: center;
-    transition: background 0.2s linear;
+    color: #0077ff;
+    position: absolute;
+    bottom: 128px;
 }
 
-div > form > input[id=credentials]:focus {
-    background: linear-gradient(#003f64, #00436a) center bottom 5px / 200px 1px no-repeat;
-}
+.login-box {
+    width: 360px;
+    height: 290px;
 
-div > button {
-    opacity: 100%;
-    background-color: transparent;
-    border: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    font-size: 19px;
-    color: #003554;
+    margin: 0 auto;
 
     position: absolute;
-    top: 494px;
-    left: 1030px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-div > button:hover {
+.login-box {
+    background-color: #131818;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.login-box>p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0px;
+
+    color: white;
+    font-size: 20px;
+}
+
+.login-box>form>input {
+    height: 40px;
+    width: 291px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+
+    padding-left: 10px;
+
+    background-color: #293131;
+    transition: transform 0.5s ease;
+
+    color: white;
+
+    border-color: transparent;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.login-box>form>input:focus {
+    outline: none;
+    border: 1px solid white;
+}
+
+.login-box>form>button {
+    height: 40px;
+    width: 305px;
+
+    margin-top: 10px;
+    padding: 0px;
+
+    background-color: #009bd6;
+
+    font-size: 20px;
+
+    color: #131818;
+
+    border-color: transparent;
+    border-radius: 3px;
+
+    transition: background-color 0.5s ease;
+}
+
+.login-box>form>button:hover {
+    background-color: #00719e;
     cursor: pointer;
 }
 
-
-div > h2 {
-    margin-top: 50px; 
-    margin-bottom: 30px;
+.swal-modal {
+    background-color: #131818;
 }
 
-div > p {
-   margin-top: auto; 
+.swal-title {
+    color: white;
 }
 
-div > p > a {
-    text-decoration: none;
-    color: #32627d;
-    transition: color 250ms linear;
+.swal-text {
+    color: white;
 }
 
-div > p > a:hover {
-    color: #479fd2;
+.swal-button {
+    background-color: #009bd6;
 }
+

@@ -8,9 +8,9 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = (
             'username',
-            'email',
 
             'discord_id',
+            'sid',
 
             'title',
             'description',
@@ -18,7 +18,6 @@ class UserSerializer(serializers.ModelSerializer):
             'languages',
             'skills',
 
-            'jobs',
             'badges',
 
             'date_joined',
@@ -28,4 +27,5 @@ class UserSerializer(serializers.ModelSerializer):
         )
 
         read_only_fields = ('date_joined',
-                            'administrator')
+                            'administrator',
+                            'sid',)
