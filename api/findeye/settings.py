@@ -21,7 +21,7 @@ SECRET_KEY = 'django-insecure-jhox%_ecghx((m+jq!)l_rjs-ns1qf#+*m-(xkox7$u-$36vpn
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = ['https://8000-limbocingo-findeye-8kagr1eh0l4.ws-eu105.gitpod.io']
 
 INSTALLED_APPS = [
     'django.contrib.auth',

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" />
     <link rel="icon" href="{% static 'media/logo.png' %}">
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -31,6 +31,7 @@
         
         <form method="post">
             {% csrf_token %}
+
             <input type="text" name="username" id="credentials" placeholder="Username" required>
             <input type="password" name="password" id="credentials" placeholder="Password" required>
             <button type="submit">Log in</button>
