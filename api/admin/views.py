@@ -35,9 +35,9 @@ class Login(View):
 
 class Panel(View):
     def get(self, request: HttpRequest):
-        try:
-            User.objects.get(sid=request.COOKIES.get('sid'))
-        except User.DoesNotExist:
-            return redirect('/api/admin/login/')
+        # try:
+        #     User.objects.get(sid=request.COOKIES.get('sid'))
+        # except User.DoesNotExist:
+        #     return redirect('/api/admin/login/')
 
         return render(request, 'panel.html')

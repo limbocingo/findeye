@@ -103,7 +103,7 @@ USE_TZ = True
 
 
 STATIC_URL = "static/"
-STATIC_ROOT = "./static" if not DEBUG else ''
+STATIC_ROOT = "static/" if not DEBUG else ''
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
