@@ -7,13 +7,22 @@
     
     <link rel="stylesheet" type="text/css" href="{% static 'css/panel.css' %}" />
     <link rel="icon" href="{% static 'media/logo.png' %}">
+
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
     
     <title>Admin Panel</title>
 </head>
 <body>
-    <h1>Hi!</h1>
-    <div class="user-information">
-        <p>Lorem Ipsum</p>
+    <div class="sidebar">
+        <div class="header">
+            <img src="{% static 'media/logo.png' %}" height="50px">
+            <div class="title">Findeye</div>
+        </div>
+        <div class="model">
+            <p>Models</p>
+        </div>
     </div>
 </body>
 </html>

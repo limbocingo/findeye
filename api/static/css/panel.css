@@ -1,18 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Lato:wght@300&family=Poppins&display=swap');
 
 
 * {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: #0e1111;
 }
 
-.user-information {
-    width: 360px;
-    height: 290px;
-    background-color: #131818;
+.sidebar {
+    border-radius: 0px 15px 15px 0px;
+
     color: white;
+    background-color: #131818;
+
+    position: fixed;
+
+    height: 100%;
+    width: 240px;
+}
+
+.header {
+    display: flex;
+    height: 50px;
+    width: 100%;
+
+    align-items: center;
+
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.title {
+    font-size: 30px;
+    margin-left: 5px;
 }
