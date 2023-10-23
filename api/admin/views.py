@@ -16,8 +16,8 @@ class Login(View):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        if request.COOKIES.get('sid'):
-            return redirect('/api/admin/panel/')
+        # if request.COOKIES.get('sid'):
+        #     return redirect('/api/admin/panel/')
 
         try:
             user = User.objects.get(username=username)
