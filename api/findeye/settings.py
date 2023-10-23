@@ -36,8 +36,10 @@ INSTALLED_APPS = [
     'fontawesomefree',
 
     'user',
+    'achievements',
+
+    'findeye',
     'admin',
-    'findeye'
 ]
 
 MIDDLEWARE = [

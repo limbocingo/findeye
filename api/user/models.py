@@ -3,32 +3,22 @@ from django.core.validators import MinLengthValidator
 from django.db.models import *
 from django.utils import timezone
 
+from achievements.models import *
+
 import random
 import string
 
 
-class Language(Model):
-    name = CharField(unique=True, max_length=64, validators=[
-                     MinLengthValidator(8)], primary_key=True)
-
-
-class Skill(Model):
-    name = CharField(unique=True, max_length=64, validators=[
-                     MinLengthValidator(8)], primary_key=True)
-    approved = BooleanField(default=False)
-
-
-class Badge(Model):
-    name = CharField(unique=True, max_length=64, validators=[
-                     MinLengthValidator(8)], primary_key=True)
-    icon = TextField(blank=False)
-
-
 class User(Model):
     """
-    TODO: 
-        - Respond Time: Avg respond time
-        - Jobs: ManyToMany of Jobs model.
+    Data for the alghorithm:
+        - Respond Time: Avg respond time.
+        - Jobs: Jobs he done or it has on pending. (ManyToMany of jobs.Job model.)
+        - Categories: Things that knows. (ManyToMany of jobs.Category model.)
+        - Badges: Achievements.
+        - Languages: Langs he knows.
+
+    Permissions system:
         - Groups: ManyToMany of Group model.
         - Permissions: ManyToMany of Permission model.
     """
@@ -47,12 +37,10 @@ class User(Model):
                             MinLengthValidator(40)], blank=True)
 
     languages = ManyToManyField(Language, blank=True)
-    skills = ManyToManyField(Skill, blank=True)
-
     badges = ManyToManyField(Badge, blank=True)
 
     administrator = BooleanField(default=False)
-    premium = BooleanField(default=False)
+    client = BooleanField(default=False)
 
     date_joined = DateTimeField(default=timezone.now)
 
