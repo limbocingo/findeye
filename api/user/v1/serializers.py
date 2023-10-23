@@ -16,13 +16,11 @@ class UserSerializer(serializers.ModelSerializer):
             'description',
 
             'languages',
-            'skills',
-
             'badges',
 
             'date_joined',
 
-            'premium',
+            'client',
             'administrator',
         )
 
