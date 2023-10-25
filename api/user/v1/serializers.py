@@ -1,3 +1,10 @@
+"""
+User application serializers.
+
+[version: 1v]
+"""
+
+
 from rest_framework import serializers
 
 from user.models import User

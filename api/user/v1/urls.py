@@ -1,3 +1,9 @@
+"""
+Urls for the User views.
+
+[version: 1v]
+"""
+
 from django.urls import re_path
 
 from user.v1.views import UserViewSet

@@ -1,9 +1,16 @@
+"""
+Models of `user` application.
+
+[author: mrcingo]
+"""
+
+
 from django.contrib.auth.hashers import identify_hasher, make_password, check_password
 from django.core.validators import MinLengthValidator
 from django.db.models import *
 from django.utils import timezone
 
-from achievements.models import *
+from information.models import *
 
 import random
 import string
@@ -11,12 +18,16 @@ import string
 
 class User(Model):
     """
+    This is user sensitive data that will be used by the alghorithm
+    to find the best job.
+
     Data for the alghorithm:
-        - Respond Time: Avg respond time.
+        - Respond Time: Avg respond time in seconds. (Integer)
         - Jobs: Jobs he done or it has on pending. (ManyToMany of jobs.Job model.)
         - Categories: Things that knows. (ManyToMany of jobs.Category model.)
-        - Badges: Achievements.
-        - Languages: Langs he knows.
+        - Badges: Achievements. (ManyToMany of achievements.Badge model.)
+        - Languages: Langs he knows. (ManyToMany of achievements.Language model.)
+        - Client: He's a project, company, startup... That payed for our service. (Boolean)
 
     Permissions system:
         - Groups: ManyToMany of Group model.
@@ -38,6 +49,7 @@ class User(Model):
 
     languages = ManyToManyField(Language, blank=True)
     badges = ManyToManyField(Badge, blank=True)
+    avg_response_time = IntegerField(default=0)
 
     administrator = BooleanField(default=False)
     client = BooleanField(default=False)

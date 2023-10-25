@@ -1,4 +1,5 @@
 from django.db.models import *
+from django.core.validators import MinLengthValidator
 
 
 class Language(Model):

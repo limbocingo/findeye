@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'fontawesomefree',
 
     'user',
-    'achievements',
+    'information',
 
     'findeye',
     'admin',
